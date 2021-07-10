@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>William's Profile</title>
+  <meta name="description" content="This is my portfolio">
+  <meta name="author" content="William">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+<header class="main_nav green">
+    <div class="container">
+        <div class="twelve columns">
+            <div class="logo">
+                <a href = "https://www.codercookies.com">coder cookies</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div id="typewriter" style="background-color: orange;" class = "twelve columns">
+        <h2 id="typetex0"> >> Hi I'm William! </h2>
+        <h2 id="typetex1"> >> I am a human! </h2>
+        <h2 id="typetex2"> >> I am a smart cookie! </h2>
+    </div>
+</div>
+
+<script>
+  var allText = [">> Hi I'm William!", ">> I am a human!", ">> I am a smart cookie!"]
+  var currentIndex0 = 0
+  var currentIndex1 = 0
+  var currentIndex2 = 0
+  var textHeader0 = document.getElementById("typetex0")
+  var textHeader1 = document.getElementById("typetex1")
+  var textHeader2 = document.getElementById("typetex2")
+  var myVar0;
+  var myVar1;
+  var myVar2;
+function add0() {
+                var text = allText[0].substring(0, currentIndex0 + 1);
+                textHeader0.innerHTML = text;
+                currentIndex0 = currentIndex0 + 1;
+
+                if(text === allText[0]) {
+                    clearInterval(myVar0);
+                    setTimeout(function() {
+                        myVar0 = setInterval(remove0, 50);
+                    }, 1000);
+                }
+            }
+
+            function remove0() {
+            var text = allText[0].substring(0, currentIndex0 - 1);
+            textHeader0.innerHTML = text;
+            currentIndex0 = currentIndex0 - 1;
+
+            if(text === "") {
+            clearInterval(myVar0);
+            currentIndex0 = 0;
+            setTimeout(function() {
+            myVar0 = setInterval(add0, 100);
+            }, 200);
+            }
+            }
+</script>
+<div class="container main">
+  <div class="row">
+    <div class="four columns">
+      <a class="image link" href="">
+        <img src=" https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png">
+      </a>
+    </div>
+    <div class="four columns">
+      <a class="image link" href="">
+        <img src="https://cdn.pixabay.com/photo/2017/09/25/18/56/social-media-2786261_960_720.jpg">
+      </a>
+    </div>
+    <div class="four columns">
+      <a class="image link" href="">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row green">
+  <div class="container">
+    <div class="four columns">
+      <img class="avatar" src="images/coderlogo.png">
+    </div>
+    <div class="eight columns">
+      <h2 class="bio">About CoderCookies</h2>
+      <h2 style="font-size: 30px;">We are a team of software engineers and passionate teachers, with a combined experience of several decades in some of the best tech companies of the world like: BlackBerry, Amazon, Apple and more</h2>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="row twelve columns">
+    <ul class="social">
+      <li class="facebook"><a href="https://youtu.be/iik25wqIuFo"><i class="fab fa-facebook"></i></a></li>
+      <li class="twitter"><a href="https://www.youtube.com/watch?v=QTT5iHCHSn0"><i class="fab fa-twitter"></i></a></li>
+      <li class="instagram"><a href="https://www.youtube.com/watch?v=fC7oUOUEEi4"><i class="fab fa-instagram"></i></a></li>
+      <li class="youtube"><a href="https://www.youtube.com/channel/UCsoVEKn2Up9Du5A0euPWZ4Q"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </div>
+  <div class="row twelve columns">
+    <p class="copyright">&copy; 2020 CoderCookies. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+<script>
+
+</script>
+</html>
